@@ -15,7 +15,7 @@
    (src-pos)
    (error
     (lambda (a b c d e)
-      (begin (printf ("parse error:\na = ~a\nb = ~a\nc = ~a\nd = ~a\ne = ~a\n" a b c d e))
+      (begin (printf "parse error:\na = ~a\nb = ~a\nc = ~a\nd = ~a\ne = ~a\n" a b c d e)
              (void))))
 
    (grammar
