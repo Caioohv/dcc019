@@ -15,6 +15,9 @@
     [(var-ast v) (apply-env Δ v)]
     [(let-ast (var-ast v) e1 e2) (value-of e2 (extend-env v (value-of e1 Δ) Δ))]
     ; put your solution for exercise 1 here
+    [(add-ast e1 e2) (+ (value-of e1 Δ) (value-of e2 Δ))]
+    [(mult-ast e1 e2) (* (value-of e1 Δ) (value-of e2 Δ))]
+    [(div-ast e1 e2) (/ (value-of e1 Δ) (value-of e2 Δ))]
     
     [e (raise-user-error "unimplemented-construction: " e)]
     )
